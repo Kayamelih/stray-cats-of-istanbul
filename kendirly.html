@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Police Siren</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      color: white;
+      font-size: 24px;
+      text-align: center;
+      animation: flash 1s infinite;
+    }
+
+    @keyframes flash {
+
+      0%,
+      50% {
+        background-color: red;
+      }
+
+      50%,
+      100% {
+        background-color: blue;
+      }
+    }
+
+    .message {
+      z-index: 10;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="message">
+    🚨 Beta Kendirliler Konuşmasın 🤫🧏 🚨
+  </div>
+  <audio id="siren" autoplay loop>
+    <source src="https://www.soundjay.com/misc/sounds/police-siren-01.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <script>
+    const sirenAudio = document.getElementById('siren');
+    sirenAudio.volume = 0.5; // Adjust the volume if necessary
+  </script>
+</body>
+
+</html>
